@@ -4,15 +4,15 @@
 
 Azure Functions is a [serverless](https://azure.microsoft.com/overview/serverless-computing/) compute service that enables you to run code on-demand without having to explicitly provision or manage infrastructure. We can se Azure Functions to run a script or piece of code in response to a variety of events.
  
-Scenario: The project manager decided to roll out a new feature but it has to be done one group of users at the time for a couple of reasons. 
+Example Scenario: The project manager decided to roll out a new feature but it has to be done one group of users at the time for a couple of reasons. 
 
- In this lab we will implement and an API and an Azure Function which returns different information based on the user logged in to the application.
+ In this lab we will implement  an API and an Azure Function which returns different information based on the user logged in to the application.
 
  ## What's covered in this lab?
 
  In this lab, you will
 
-* Provision a Team Services project with some application data.
+* Provision a Team Services project with application data.
 * Create API endpoints in the application
 * Set Up Azure function
 * Update Website to retrieve products on special from API
@@ -77,7 +77,7 @@ Scenario: The project manager decided to roll out a new feature but it has to be
 
     ![addreference](images/addreference.png)
 
-6.  Define the original API.Right click on **Controllers** folder, click on **Add**, then "Class...".
+6.  Define the original API. Right click on **Controllers** folder, click on **Add**, then **Class**.
    ![addspecialcontroller](images/addspecialcontroller.png)
 
 7. Enter **SpecialsController.cs** as the name of this class and click on **Add**.
@@ -105,7 +105,6 @@ namespace PartsUnlimited.API.Controllers
                     Title = "Filter Set V1",
                     CategoryId = 5,
                     Price = 28.99M,
-                    DiscountedPrice=27.99M,
                     Discount="10%",
                     SalePrice = 28.99M,
                     ProductArtUrl = "https://raw.githubusercontent.com/Microsoft/PartsUnlimited/master/src/PartsUnlimitedWebsite/images/product_oil_filters.jpg",
@@ -121,7 +120,6 @@ namespace PartsUnlimited.API.Controllers
                     Title = "Oil and Filter Combo V1",
                     CategoryId = 5,
                     Price = 34.49M,
-                    DiscountedPrice=33.49M,
                     Discount="10%",
                     SalePrice = 34.49M,
                     ProductArtUrl = "https://raw.githubusercontent.com/Microsoft/PartsUnlimited/master/src/PartsUnlimitedWebsite/images/product_oil_oil-filter-combo.jpg",
@@ -137,7 +135,6 @@ namespace PartsUnlimited.API.Controllers
                     Title = "Synthetic Engine Oil V1",
                     CategoryId = 5,
                     Price = 36.49M,
-                    DiscountedPrice=35.49M,
                     Discount="10%",
                     SalePrice = 36.49M,
                     ProductArtUrl = "https://raw.githubusercontent.com/Microsoft/PartsUnlimited/master/src/PartsUnlimitedWebsite/images/product_oil_premium-oil.jpg",
@@ -228,7 +225,7 @@ namespace PartsUnlimited.API.Controllers
 }
 ```
 
- >**Note:** For the demo purposes the new feature here is just modified text for each product on special.
+ >**Note:** For the demo purposes the new feature here is just modified text for each product and added diffrent discount % for users on special.
 
  10. Click on **Changes** in **Team Explorer** and push the changes to the server
 
